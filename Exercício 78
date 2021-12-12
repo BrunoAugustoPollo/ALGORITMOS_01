@@ -1,0 +1,59 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int casado = 0, solteiro = 0, viuvo = 0, desquitado = 0, valor = 0, entrada;
+    float idade = 0, idade_viuvas = 0;
+    string estado_civil; 
+    
+    cout<<"Informe a quantidade de pessoas a serem cadastradas: ";
+    cin >> entrada;
+    while(valor < entrada){
+    cout<<"Informe sua idade ";
+    std::cin >> idade;
+    
+    cout<<"Informe seu estado civil ";
+    std::cin >> estado_civil;
+    
+    if(estado_civil == "C"){
+        casado++;
+        valor++;
+    }
+    
+    if(estado_civil == "S"){
+        solteiro++;
+        valor++;
+    }
+    
+    if(estado_civil == "V"){
+        viuvo++;
+        valor++;
+        idade_viuvas+= idade++;
+    }
+    
+    if(estado_civil == "D"){
+        desquitado++;
+        valor++;
+    }
+    
+    }
+    
+    cout<<"A quantidade de pessoas casadas é de: " << casado <<"\n";
+    
+    cout<<"A quantidade de pessoas solteiras é de: " << solteiro <<"\n";
+
+    cout<<"A média de idade das pessoas viúvas: " << idade_viuvas / viuvo <<"\n";
+    
+    cout<<"O percentual de pessoas desquitadas em relação a todas as pessoas analisadas: " << (100 * desquitado) / valor <<"\n";
+    
+    
+
+    
+    
+    
+
+    return 0;
+}
