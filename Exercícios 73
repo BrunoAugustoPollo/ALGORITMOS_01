@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int joao = 1800, pc = 2000, meses = 0; 
+    float juros, valor = 0, saldo_ant, saldo_post;
+    
+    cout << "MÊS\tSALDO ANTERIOR\t\tJUROS\t\tSALDO ATUAL\n";
+
+    while(meses < 8){
+        
+        juros = ((joao * 1.5) / 100);
+        
+        saldo_ant = joao + juros;
+        
+        joao = saldo_ant;
+        
+        saldo_post = joao + juros;
+    
+        
+        meses++;
+        
+        
+cout << meses << "º\t";
+cout <<  saldo_ant << "\t\t\t";
+ cout <<  juros << "\t\t";
+ cout <<  saldo_post << "\t\t\t" << endl;
+        
+        
+
+
+    }
+
+
+    
+    
+    
+
+    return 0;
+}
