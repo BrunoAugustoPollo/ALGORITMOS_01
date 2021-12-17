@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ 
+
+float carlos, joao, renda_Carlos, renda_Joao;
+
+int cont;
+
+carlos = 1000;
+
+joao = carlos / 3;
+
+cont = 1;
+
+renda_Carlos = (carlos * ((2/100) + carlos));
+
+renda_Joao = (joao * ((5/100) + joao));
+
+while (renda_Joao < renda_Carlos){
+
+renda_Joao = (renda_Joao * ((5/100) + renda_Joao));
+
+renda_Carlos = (renda_Carlos * ((2/100) + renda_Carlos));
+
+cont ++;
+
+}
+
+cout <<   "A quantidade de meses para João alcançar Carlos é de "<< cont <<" meses.";
+
+
+    return 0;
+}
