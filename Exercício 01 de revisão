@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float peso;
+    string estado;
+    
+    cout<<"Insira o peso ";
+    cin >> peso;
+    
+    cout<<"Insira o estado ";
+    cin >> estado;
+    
+    if(peso <= 2 && estado == "RS"){
+        cout<<"O valor total do frete é de R$ 8,10";
+    }else if(peso <= 2 && estado == "SC"){
+        cout<<"O valor total do frete é de R$ 9,40";
+    }else if(peso <= 2 && estado == "PR"){
+        cout<<"O valor total do frete é de R$ 11,10";
+    }else if(peso >= 2 && peso <= 3 && estado == "RS"){
+        cout<<"O valor total do frete é de R$ 8,70";
+    }else if(peso >= 2 && peso <= 3 && estado == "SC"){
+        cout<<"O valor total do frete é de R$ 10,30";
+    }else if(peso >= 3 && peso <= 4 && estado == "RS"){
+        cout<<"O valor total do frete é de R$ 9,20";
+    }else if(peso >= 3 && peso <= 4 && estado == "SC"){
+        cout<<"O valor total do frete é de R$ 11,20";
+    }else if(peso >= 3 && peso <= 4 && estado == "PR"){
+        cout<<"O valor total do frete é de R$ 13,40";
+    }
+
+    return 0;
+}
