@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float codigo, qtd, p_custo, v_estoq, p_venda;
+    string tipo;
+    
+    cout<<"Insira o código do produto: \n";
+    cin >> codigo;
+    
+    cout<<"Insira a quantidade em estoque: \n";
+    cin >> qtd;
+    
+    cout<<"Insira o preço de custo: \n";
+    cin >> p_custo;
+    
+    cout<<"Insira o tipo: \n";
+    cin >> tipo;
+    
+    v_estoq = qtd * p_custo;
+    
+    if(tipo == "P"){
+        p_venda = ((p_custo * 90) / 100) + p_custo;
+    }else {
+       p_venda = ((p_custo * 65) / 100) + p_custo; 
+    }
+    
+    cout<<"O valor do total de produtos em estoque é de R$" << v_estoq <<"\n";
+    
+    cout<<"O valor do total de produtos em estoque é de R$" << p_venda;
+
+    return 0;
+}
