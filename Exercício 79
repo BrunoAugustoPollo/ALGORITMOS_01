@@ -1,0 +1,58 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int entrada, nota_01, nota_02, nota_03, peso_01, peso_02, peso_03;
+    
+    cout<<"Escolha uma das três opções: \n ";
+    cout<<"(1) Média Aritmética \n ";
+    
+    cout<<"(2) Média Ponderada \n ";
+   
+    cout<<"(3) Sair do programa \n ";
+    cin >> entrada;
+    
+    if(entrada == 1){
+        cout<<"Insira a nota 01 \n ";
+        cin >> nota_01;
+                cout<<"Insira a nota 02 \n ";
+                    cin >> nota_02;
+                        
+                        cout<<"A média aritmética é: " << (nota_01 + nota_02) / 2 ;
+    }
+    
+    if(entrada == 2){
+        cout<<"Insira a nota 01 \n ";
+        cin >> nota_01;
+                cout<<"Insira a nota 02 \n ";
+                    cin >> nota_02;
+                    
+                    cout<<"Insira a nota 03 \n ";
+                    cin >> nota_03;
+                    
+                     cout<<"Insira o peso 01 \n ";
+        cin >> peso_01;
+                cout<<"Insira o peso 02 \n ";
+                    cin >> peso_02;
+                    
+                    cout<<"Insira o peso 03 \n ";
+                    cin >> peso_03;
+                    
+                    
+                    
+                        
+                        cout<<"A média aritmética é: " << (nota_01 * peso_01) + (nota_02 * peso_02) + (nota_03 * peso_03) / (peso_01 + peso_02 + peso_03);
+    }
+    
+    if(entrada == 3){
+        cout<<"Fim do programa";
+    }
+
+
+
+
+    return 0;
+}
