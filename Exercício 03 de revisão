@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float salario, vendas, total;
+    
+    cout<<"Insira o salário: \n";
+    cin>> salario;
+    
+     cout<<"Insira o valor total de vendas: \n";
+     cin>> vendas;
+     
+     total = ((vendas * 15) / 100) + salario;
+     
+     cout<<"Salário final: R$" << total;
+     
+     
+    
+    
+
+    return 0;
+}
