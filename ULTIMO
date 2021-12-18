@@ -1,66 +1,61 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <iostream>
 
 using namespace std;
 
-int main()
+int main ()
 {
-    int gremio, inter, soma_grenais = 0, v_gremio = 0, v_inter = 0, empate = 0, media = 0;
+    int gremio = 0, inter = 0, soma_grenais = 0, v_gremio = 0, v_inter = 0, empate = 0, gols = 0, media = 0;
     string resposta = "S";
     
-    while(resposta == "S"){
+    while (resposta == "S") {
     
-    cout<< "Novo grenal (S-sim N-nao)";
-    cin>> resposta;
+    cout << "Novo grenal (S-sim N-nao)";
+    cin >> resposta;
     
-     if(resposta == "N"){
-        break;
-    }
+     if (resposta == "N") {
+    break;    
+         
+     }
     
-    cout<<"Gols marcados pelo Grêmio: \n";
-    cin >>gremio;
-    soma_grenais++;
+    cout << "Gols marcados pelo Grêmio: \n";
+    cin >> gremio;
+    soma_grenais ++;
+    gols += gremio;
 
-    cout<<"Gols marcados pelo Inter: \n";
-    cin >>inter;
+    cout << "Gols marcados pelo Inter: \n";
+    cin >> inter;
+    gols += inter;
     
-    media += (inter + gremio) / soma_grenais;
+    media = gols / soma_grenais;
     
     
-    if(gremio > inter){
-        v_gremio++;
-    }else if(gremio == inter){
-        empate++;
+    if (gremio > inter) {
+        v_gremio ++;
+    } else if (gremio == inter) {
+        empate ++;
     }else{
-        v_inter++;
+        v_inter ++;
     }
 
     }
     
-    cout<<"Quantos GRENAIS fizeram parte da estatística? " <<soma_grenais <<"\n";
+    cout << "Quantos GRENAIS fizeram parte da estatística? " << soma_grenais << "\n";
     
-    cout<<"− O número de vitórias do Inter é de " <<v_inter <<"\n";
+    cout << "- O número de vitórias do Inter é de " << v_inter << "\n";
     
-    cout<<"− O número de vitórias do Grêmio é de " <<v_gremio <<"\n";
+    cout << "- O número de vitórias do Grêmio é de " << v_gremio << "\n";
 
-    cout<<"− O número de empates é de " <<empate <<"\n";
+    cout << "- O número de empates é de " << empate << "\n";
     
-    cout<<"− A média de gol foi de :  " <<media <<"\n";
+    cout << "- A média de gols foi de: " << media << "\n";
 
     
-    if(v_inter > v_gremio){
-        cout<<"O Inter venceu mais grenais";
-    } else if(v_inter == v_gremio){
-        cout<<"Nao houve vencedor";
-    }else if(v_inter <= v_gremio){
-        "O Grêmio venceu mais grenais";
+    if (v_inter> v_gremio) {
+        cout << "O Inter venceu mais grenais ";
+    } else if (v_inter == v_gremio) {
+        cout << "Nao houve vencedor ";
+    } else {
+       cout<< "O Grêmio venceu mais grenais ";
     }
     
    
