@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int idade, peso, gotas;
+    
+    cout<<"Insira sua idade: \n";
+    cin >>idade;
+    
+    cout<<"Insira seu peso: \n";
+    cin >>peso;
+    
+    
+    
+    if(idade >= 12){
+        if(peso >= 60){
+            cout<<"Você deve tomar 1000 mg. 20 gotas";
+        }else{
+            cout<<"Você deve tomar 875 mg. 17.5 gotas";
+        }
+    }else{
+        if(peso >= 5 && peso <= 9){
+            gotas = (125 * 20) / 1000;
+            cout<<"Você deve tomar 125 mg. " << gotas <<" gotas";
+    } else if(peso >= 9.1 && peso <= 16){
+            gotas = (250 * 20) / 1000;
+            cout<<"Você deve tomar 250 mg. " << gotas <<" gotas";
+    } else if(peso >= 16.1 && peso <= 24){
+            gotas = (375 * 20) / 1000;
+            cout<<"Você deve tomar 375 mg. " << gotas <<" gotas";
+    } else if(peso >= 24.1 && peso <= 30){
+            gotas = (500 * 20) / 1000;
+            cout<<"Você deve tomar 500 mg. " << gotas <<" gotas";
+    } else if(peso > 30){
+            gotas = (750 * 20) / 1000;
+            cout<<"Você deve tomar 750 mg. " << gotas <<" gotas";
+    }
+    }
+    
+    
+
+    return 0;
+}
